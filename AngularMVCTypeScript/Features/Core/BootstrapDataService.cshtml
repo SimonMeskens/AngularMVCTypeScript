@@ -1,0 +1,30 @@
+﻿<script type="text/javascript">
+    var angularMVCTypeScript;
+    (function (angularMVCTypeScript) {
+        'use strict';
+
+        var BootstrapDataService = function() {
+            var service = {};
+
+            var data = @Html.Raw(Json.Encode(Model));
+
+            service.consumeNext = consumeNext;
+
+            function consumeNext() {
+                if (data !== undefined && data !== null) {
+                    var consumed = data;
+                    data = null;
+                    return consumed;
+                }
+                else {
+                    return {};
+                }
+            }
+
+            return service;
+        };
+
+        angularMVCTypeScript.BootstrapDataService = BootstrapDataService;
+
+    })(angularMVCTypeScript || (angularMVCTypeScript = {}));
+</script>
