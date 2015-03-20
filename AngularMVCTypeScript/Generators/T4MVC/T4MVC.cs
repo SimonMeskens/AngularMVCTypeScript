@@ -103,6 +103,15 @@ namespace Links
                 public static readonly string jquery_2_1_3_min_map = Url("jquery-2.1.3.min.map");
             }
         
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public static class ngremotevalidate {
+                private const string URLPATH = "~/Scripts/libs/ngremotevalidate";
+                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(URLPATH); }
+                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(URLPATH + "/" + fileName); }
+                public static readonly string ngRemoteValidate_0_6_1_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/ngRemoteValidate.0.6.1.min.js") ? Url("ngRemoteValidate.0.6.1.min.js") : Url("ngRemoteValidate.0.6.1.js");
+                public static readonly string ngRemoteValidate_0_6_1_min_js = Url("ngRemoteValidate.0.6.1.min.js");
+            }
+        
         }
     
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -202,6 +211,15 @@ namespace Links
                         public const string jquery_2_1_3_intellisense_js = "~/Scripts/libs/jquery/jquery-2.1.3.intellisense.js"; 
                         public const string jquery_2_1_3_js = "~/Scripts/libs/jquery/jquery-2.1.3.js"; 
                         public const string jquery_2_1_3_min_js = "~/Scripts/libs/jquery/jquery-2.1.3.min.js"; 
+                    }
+                }
+                public static partial class ngremotevalidate 
+                {
+                    public static class Assets
+                    {
+                    	public const string BundlePath = "~/bundles/Scripts/libs/ngremotevalidate";
+                        public const string ngRemoteValidate_0_6_1_js = "~/Scripts/libs/ngremotevalidate/ngRemoteValidate.0.6.1.js"; 
+                        public const string ngRemoteValidate_0_6_1_min_js = "~/Scripts/libs/ngremotevalidate/ngRemoteValidate.0.6.1.min.js"; 
                     }
                 }
                 public static class Assets

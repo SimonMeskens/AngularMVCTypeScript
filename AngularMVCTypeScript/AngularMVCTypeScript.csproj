@@ -219,6 +219,8 @@
     <Content Include="Scripts\libs\angularjs\angular-mocks.js" />
     <Content Include="Scripts\libs\jquery\jquery-2.1.3.js" />
     <Content Include="Scripts\libs\jquery\jquery-2.1.3.min.js" />
+    <Content Include="Scripts\libs\ngremotevalidate\ngRemoteValidate.0.6.1.js" />
+    <Content Include="Scripts\libs\ngremotevalidate\ngRemoteValidate.0.6.1.min.js" />
     <Content Include="Scripts\_references.js" />
     <None Include="Generators\T4MVC\T4MVC.tt.settings.xml" />
     <Content Include="Web.config" />
