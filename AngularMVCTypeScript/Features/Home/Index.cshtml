@@ -1,9 +1,12 @@
 ﻿@model AngularMVCTypeScript.Features.Home.HomeViewModel
 
 <div>
-    <h1 ng-bind="Model.HelloAngular">@Model.HelloAngular</h1>
-
-    <input type="text" ng-model="Model.HelloAngular" value="@Model.HelloAngular" />
-
-    <div id="content"></div>
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.HelloAngular, new { ng_bind = "Model.HelloAngular"})
+        <br />
+        @Html.TextBoxFor(model => model.HelloAngular, new { ng_model = "Model.HelloAngular", ng_remote_validate = Url.Action(MVC.Home.Validate()) })
+        <br />
+        <input type="submit" ng-click="checkAlignment()" value="check if evil" />
+    }
 </div>

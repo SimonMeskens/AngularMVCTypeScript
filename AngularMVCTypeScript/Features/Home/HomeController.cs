@@ -18,5 +18,14 @@ namespace AngularMVCTypeScript.Features.Home
 
             return View(viewModel);
         }
+
+        [HttpPost]
+        public virtual ActionResult Validate(string value)
+        {
+            if (value.Contains('x'))
+                return Json(new { isValid = false, value = "O's are evil!"});
+
+            return Json(new { isValid = true, value = "Perfectly fine." });
+        }
     }
 }

@@ -58,6 +58,12 @@ namespace AngularMVCTypeScript.Features.Home
             return RedirectToActionPermanent(taskResult.Result);
         }
 
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult Validate()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Validate);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public HomeController Actions { get { return MVC.Home; } }
@@ -75,15 +81,25 @@ namespace AngularMVCTypeScript.Features.Home
         public class ActionNamesClass
         {
             public readonly string Index = "Index";
+            public readonly string Validate = "Validate";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
             public const string Index = "Index";
+            public const string Validate = "Validate";
         }
 
 
+        static readonly ActionParamsClass_Validate s_params_Validate = new ActionParamsClass_Validate();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_Validate ValidateParams { get { return s_params_Validate; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_Validate
+        {
+            public readonly string value = "value";
+        }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ViewsClass Views { get { return s_views; } }
@@ -113,6 +129,18 @@ namespace AngularMVCTypeScript.Features.Home
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
             IndexOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void ValidateOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string value);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult Validate(string value)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Validate);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "value", value);
+            ValidateOverride(callInfo, value);
             return callInfo;
         }
 
