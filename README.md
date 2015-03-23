@@ -15,7 +15,9 @@ Web Application seed project
 - Automatic generation of ViewModel interfaces from C# classes
 - TypeScript classes used as controller-as in AngularJS
 - AngularJS with server-side rendering and bootstrapping
+- Remote validation with ngRemoteValidate
 
 ## Todo
 
-- Server-side form validation
+- Better example app
+- Authorization

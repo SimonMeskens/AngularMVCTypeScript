@@ -19,7 +19,7 @@
   <!--Names of areas which follow the FeatureFolder convention (controllers and views are placed within the same folder).
 Use <Area>*</Area> if you only use Areas with FeatureFolders-->
   <FeatureFolderAreas>
-    <!--<Area></Area>-->
+    <Area>*</Area>
   </FeatureFolderAreas>
   <!--Choose whether you want to include an 'Areas' token when referring to areas.
 e.g. Assume the Area is called Blog and the Controller is Post:

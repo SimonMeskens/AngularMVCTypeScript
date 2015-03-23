@@ -1,12 +1,29 @@
 ﻿@model AngularMVCTypeScript.Features.Home.HomeViewModel
 
 <div>
-    @using (Html.BeginForm())
-    {
-        @Html.LabelFor(model => model.HelloAngular, new { ng_bind = "Model.HelloAngular"})
+    <form name="alignmentForm">
+        <label for="HelloAngular" ng-bind="Model.HelloAngular">@Model.HelloAngular</label>
         <br />
-        @Html.TextBoxFor(model => model.HelloAngular, new { ng_model = "Model.HelloAngular", ng_remote_validate = Url.Action(MVC.Home.Validate()) })
+        <input type="text"
+               name="HelloAngular"
+               value="@Model.HelloAngular"
+               ng-model="Model.HelloAngular"
+               ng-remote-validate="@Url.Action(MVC.Home.Validate())"
+               required />
+        <span ng-show="alignmentForm.HelloAngular.$error.required">
+            Required
+        </span>
+        <span ng-show="alignmentForm.HelloAngular.$error.ngRemoteValidate">
+            O's are evil
+        </span>
         <br />
-        <input type="submit" ng-click="checkAlignment()" value="check if evil" />
-    }
+        <button type="submit"
+                ng-disabled="alignmentForm.$invalid || alignmentForm.$pending"
+                ng-click="checkAlignment(Model.HelloAngular)">
+            Check if evil
+        </button>
+    </form>
+
+    @Html.ActionLink("test", MVC.Home.Validate())
+    @Html.ActionLink("test2", "Validate", "Home")
 </div>

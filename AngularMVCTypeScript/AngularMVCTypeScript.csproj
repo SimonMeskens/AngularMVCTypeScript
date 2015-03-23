@@ -222,7 +222,9 @@
     <Content Include="Scripts\libs\ngremotevalidate\ngRemoteValidate.0.6.1.js" />
     <Content Include="Scripts\libs\ngremotevalidate\ngRemoteValidate.0.6.1.min.js" />
     <Content Include="Scripts\_references.js" />
-    <None Include="Generators\T4MVC\T4MVC.tt.settings.xml" />
+    <None Include="Generators\T4MVC\T4MVC.tt.settings.xml">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -7,8 +7,11 @@ using AngularMVCTypeScript.Core;
 
 namespace AngularMVCTypeScript.Features.Home
 {
+    [RoutePrefix("Home")]
     public partial class HomeController : Controller
     {
+        [Route]
+        [Route("~/", Name = "Landing")]
         public virtual ActionResult Index()
         {
             var viewModel = new HomeViewModel()
@@ -20,9 +23,10 @@ namespace AngularMVCTypeScript.Features.Home
         }
 
         [HttpPost]
+        [Route("Validate")]
         public virtual ActionResult Validate(string value)
         {
-            if (value.Contains('x'))
+            if (value.Contains('o'))
                 return Json(new { isValid = false, value = "O's are evil!"});
 
             return Json(new { isValid = true, value = "Perfectly fine." });

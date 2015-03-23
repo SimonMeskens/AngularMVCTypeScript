@@ -13,10 +13,14 @@ namespace AngularMVCTypeScript
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();
+
+            AreaRegistration.RegisterAllAreas();
+
             routes.MapRoute(
-                name: "Default",
-                url: "{area}/{controller}/{action}/{id}",
-                defaults: new { area = "Home", controller = "Home", action = "Index", id = UrlParameter.Optional }
+               name: "Default",
+               url: "{controller}/{action}",
+               defaults: new { controller = "Home", action = "Index" }
             );
         }
     }
